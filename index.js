@@ -1,50 +1,118 @@
-let birthYear = prompt('Please enter your year of birth?');
-let city = prompt('What is your city?');
-let typeOfSport = prompt('What is your favorite sport?');
+// 1
+let taskFirst = 10;
 
-let currentYear = new Date().getFullYear();
-let age = currentYear - birthYear;
-
-let messageBirth =`Your ${age} years old.`;
-
-if (!birthYear) {
-    messageBirth = (`It's a pity that you didn't want to enter your year of birth!`);
-  } 
-
-let messageCity = `You live in city ${city}`;
-
-if (city === "Kyiv") {
-    messageCity = `You live in the capital of Ukraine, ${city}.`;
-} else if (city === "Washington") {
-    messageCity = `You live in the capital of USA, ${city}.`;
-} else if (city === "London") {
-    messageCity = `You live in the capital of Great Britain, ${city}.`;
+while (taskFirst <= 20) {
+  document.write(taskFirst);
+  
+  if (taskFirst < 20) {
+    document.write(", ");
+  }
+  
+  taskFirst++;
 }
-else if (!city) {
-    messageCity = `It's a pity that you didn't want to enter your city!`;
+// 2 
+let taskSecond = 10;
+
+while (taskSecond <= 20){
+taskSecond++;
+
+console.log(taskSecond * taskSecond);
 }
 
 
-let mma = ('Jonathan Dwight Jones');
-let box = ('Volodymyr Klichko');
-let football = ('Lionel Messi');
+// 3
+let taskThird = 1;
 
-let messageSport = `Cool! Do you want to become ${typeOfSport} ?`;
+while (taskThird <= 10){
+taskThird++;   
 
-  if (typeOfSport === "mma") {
-    messageSport = `Cool! Do you want to become ${mma} ?`; 
-  } else if (typeOfSport === "box") {
-    messageSport = `Cool! Do you want to become ${box} ?`; 
-  } else if (typeOfSport === "football") {
-    messageSport = `Cool! Do you want to become ${football} ?`; 
+console.log(7 * taskThird);
+}
+
+// 4
+let sum = 0;
+let taskFour = 1;
+
+while (taskFour <= 15){
+sum += taskFour;
+taskFour++;
+}
+
+console.log(sum);
+
+// 5
+let taskFive = 15;
+let multiplication = 1;
+
+while (taskFive <= 35){
+multiplication *= taskFive;
+taskFive++;
+}
+
+console.log(multiplication);
+
+// 6
+let taskSix = 1;
+let sumSix = 0;
+let average = 0;
+
+while (taskSix <= 500){
+sumSix += taskSix;
+taskSix++;
+average++;
+}
+
+console.log(sumSix/average);
+
+// 7
+let taskSeven = 30;
+let sumSeven = 0;
+
+while (taskSeven <= 80){
+    if (!(taskSeven%2)){
+        sumSeven +=  taskSeven;
+    }
+taskSeven++;
+}
+
+console.log(sumSeven);
+
+// 8
+let taskEight = 100;
+
+while (taskEight <= 200){
+    if (!(taskEight%3)){
+    console.log(taskEight);
+    }
+taskEight++;
+}
+
+// 9-10-11
+let taskNine = parseInt(prompt('Please enter any number?'));
+let i = 1;
+let countTen = 0;
+let sumEleven = 0;
+
+while (i <= taskNine){
+    if(taskNine % i === 0){
+    console.log(i);
+    if(i % 2 === 0){
+        countTen++;
+        sumEleven += i;
+    }
+}
+    i++;
+}
+
+console.log(`Count even numbers = ${countTen}. Sum of even numbers= ${sumEleven} `);
+
+// 12
+let firstNum = 1;
+while (firstNum <= 10) {
+  let secondNum = 1;
+  while (secondNum <= 10) {
+    console.log(`${firstNum} * ${secondNum} = ${firstNum*secondNum}`);
+    secondNum++;
   }
-  else if (!typeOfSport) {
-    messageSport = (`It's a pity that you didn't want to enter your favorite sport!`);
-  }
-  else{
-    messageSport = `Your favorite sport is `  + typeOfSport;
-  }
-
-alert(` ${messageBirth} ${messageCity}  ${ messageSport}`);
-
-
+  firstNum++;
+}
