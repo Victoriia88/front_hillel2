@@ -1,14 +1,14 @@
-let lengtsOfArray = parseInt(prompt("Введіть, будь ласка, довжину масиву?"));
-let array = [];
+function createSumFunction() {
+  let currentSum = 0;
 
-for (i = 0; i < lengtsOfArray; i++) {
-  let elementArray = prompt("Введіть елемент масиву:");
-  array.push(elementArray);
+  return function sum(value) {
+    currentSum += value;
+    return currentSum;
+  };
 }
-console.log(`Масив до сортування: ${array}`);
 
-array.sort();
-console.log(`Відсортований масив: ${array}`);
+const sum = createSumFunction();
 
-array.splice(1, 3);
-console.log(`Масив з видаленими елементами: ${array}`);
+console.log(sum(3));
+console.log(sum(5));
+console.log(sum(20));
